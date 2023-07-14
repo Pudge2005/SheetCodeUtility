@@ -124,7 +124,7 @@ namespace DevourDev.SheetCodeUtility.Testing
             return new TestBuilder(this);
         }
 
-        public TestResult[] StartTests(System.Action testMethod, bool stopOnFail = true)
+        public TestResult[] StartTests(System.Action testMethod, bool stopOnFail = true, bool throwException = false)
         {
             var tests = _testDatas;
             var testsCount = tests.Count;
@@ -157,6 +157,11 @@ namespace DevourDev.SheetCodeUtility.Testing
                     catch (Exception ex)
                     {
                         result = CreateResultFromException(test, sw.Elapsed, ex);
+
+                        if (throwException)
+                        {
+                            throw;
+                        }
                     }
                     finally
                     {

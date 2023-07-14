@@ -82,7 +82,7 @@
 
                     for (int i = 0; i < len; i++)
                     {
-                        ints[len] = int.Parse(slices[i]);
+                        ints[i] = int.Parse(slices[i]);
                     }
 
                     return ints;
@@ -96,7 +96,7 @@
 
                     for (int i = 0; i < len; i++)
                     {
-                        nums[len] = long.Parse(slices[i]);
+                        nums[i] = long.Parse(slices[i]);
                     }
 
                     return nums;
@@ -110,7 +110,7 @@
 
                     for (int i = 0; i < len; i++)
                     {
-                        nums[len] = double.Parse(slices[i]);
+                        nums[i] = double.Parse(slices[i]);
                     }
 
                     return nums;
@@ -124,7 +124,7 @@
 
                     for (int i = 0; i < len; i++)
                     {
-                        nums[len] = decimal.Parse(slices[i]);
+                        nums[i] = decimal.Parse(slices[i]);
                     }
 
                     return nums;
